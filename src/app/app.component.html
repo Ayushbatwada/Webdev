@@ -1,0 +1,6 @@
+<app-top-bar [showTopBar]="sharedService.showTopBar" 
+    [firstName]="storageService.getUserFirstName()"
+    (userAction)="navigateToClickedComponent($event)"
+    (logoutAction)="authService.logout()">
+</app-top-bar>
+<router-outlet></router-outlet>

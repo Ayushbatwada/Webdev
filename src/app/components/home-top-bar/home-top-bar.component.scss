@@ -1,0 +1,20 @@
+.topbar{
+    width:100%;
+    top:0;
+    height:68px;
+    background:gainsboro;
+    display: flex;
+    align-items: center;
+    position:sticky;
+    z-index:1;
+    justify-content: flex-end;
+  
+}
+
+.home{
+    color:blue;
+    cursor: pointer;
+    font-size: 20px;
+    padding-right:50px;
+}
+

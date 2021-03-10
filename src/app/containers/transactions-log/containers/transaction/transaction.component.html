@@ -1,0 +1,32 @@
+<section class="container" *ngIf="transactions">
+    <div class="heading">Transaction History</div>
+
+    <button mat-raised-button (click)="createNewTransaction()" color="primary">New Transaction</button>
+    <table class="table">
+        <thead>
+            <tr class="header">
+                <th class="cell hcell">SNo.</th>
+                <td class="cell"><span class="hcell">Name</span></td>
+                <td class="cell"><span class="hcell">Amount</span></td>
+                <td class="cell"><span class="hcell">Date</span></td>
+                <td class="cell"><span class="hcell">Transaction Type</span></td>
+                <td class="cell"><span class="hcell">Transaction Mode</span></td>
+            </tr>
+        </thead>
+        <tbody *ngFor="let transaction of transactions; let i = index;">
+            <tr class="noteRow" (click)="navigateToDetailPage(transaction['_id'])">
+                <th class="cell">{{i+1}}</th>
+                <td class="cell"><span class="link">{{transaction['name'] | titlecase}}</span></td>
+                <td class="cell"><span class="link">{{transaction['amount']}}</span></td>
+                <td class="cell"><span class="link">{{transaction['create_date'] | date:"dd-MMM-YYYY"}}</span></td>
+                <td class="cell"><span class="link">{{transaction['transactionType'] | titlecase}}</span></td>
+                <td class="cell"><span class="link">{{transaction['transactionMode'] | titlecase}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section *ngIf="loader" class='progress'>       
+        <mat-spinner></mat-spinner>
+    </section>
+</section>
+

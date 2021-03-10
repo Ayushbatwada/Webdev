@@ -1,0 +1,27 @@
+<app-home-top-bar></app-home-top-bar>
+<section class="main-container">
+    <section class="signup">
+        <section class="center">
+            <p class="title">Welcome to myDetails community</p>
+
+            <mat-form-field class="info" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" type="email" [(ngModel)]="name" placeholder="Enter name">
+            </mat-form-field>
+
+            <mat-form-field class="info" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput name="email" type="email" [(ngModel)]="email" placeholder="Enter email">
+            </mat-form-field>
+
+            <mat-form-field class="info" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput name="password" type="password" [(ngModel)]="password" placeholder="Enter password">
+            </mat-form-field>
+            <div class="center">
+                <button [disabled] = "!name || !password || !email" (click)="signup()" mat-raised-button color="primary">Signup</button>
+            </div>
+        </section>
+    </section>
+
+</section>

@@ -1,0 +1,13 @@
+<div class="topbar" *ngIf="showTopBar">
+        <div>
+                <span (click)="navigateToHomePage()" class="home">Home</span>
+                <span (click)="navigateToTaskTrackerPage()" class="home">Task Tracker</span>
+                <span (click)="navigateToTransactionsPage()" class="home">Transactions</span>
+        </div>
+        <div (click)="expandOptionsSection()" class="user">{{firstName}} <i class="bi bi-chevron-down icon"></i>
+                <div class="option-container" *ngIf="showOptions">
+                        <p class="options">Profile</p>
+                        <p (click)="logout()" class="options">Logout</p>
+                </div>
+        </div>
+</div>

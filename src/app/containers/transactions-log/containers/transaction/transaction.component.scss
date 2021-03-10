@@ -1,0 +1,73 @@
+.container{
+    width:90%;
+    margin:auto;
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress{
+  position: absolute;
+  top:50;
+  left:50;
+}
+
+.heading{
+    color:blue;
+    font-size:35px;
+    text-align: center;
+    margin-top:50px;
+}
+
+button{
+  margin-top:30px;
+}
+
+.table{
+    width:100%;
+    margin:auto;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    margin-top:35px;
+  }
+  
+  .cell{
+    padding:12px 17px 12px 17px;
+    vertical-align:middle;
+    font-size:17px;
+  }
+  
+  h1{
+    color:#001443;
+    margin:15px 0px 25px 0px;
+    font-size:25px;
+    font-weight:bold;
+  }
+  
+  .link{
+    cursor:pointer;
+    color:#001443;
+  }
+
+  .hcell{
+      color:white;
+  }
+  
+  .noteRow{
+    background-color: ghostwhite;
+    padding:30px;
+    border-spacing:50px;
+    border-radius:10px;
+    box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.034), 0 0 7px rgba(0, 0, 0, 0.048), 0 0 18px rgba(0, 0, 0, 0.06), 0 18px 18px rgba(0, 0, 0, 0.032), 0 13px 28px rgba(0, 0, 0, 0.032);
+  }
+  .header{
+    background-color: #001443;
+    padding:30px;
+    border-spacing:50px;
+    border-radius:10px;
+    box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.034), 0 0 7px rgba(0, 0, 0, 0.048), 0 0 18px rgba(0, 0, 0, 0.06), 0 18px 18px rgba(0, 0, 0, 0.032), 0 13px 28px rgba(0, 0, 0, 0.032);
+  }
+  .noteRow:hover{
+    background:white;
+    cursor: pointer;
+  }

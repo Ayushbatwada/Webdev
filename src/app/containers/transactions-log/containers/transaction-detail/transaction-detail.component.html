@@ -1,0 +1,54 @@
+<section class="detail" *ngIf="transactionDetails">
+    <div class="heading">Transaction Details</div>
+    <mat-slide-toggle class="toggle" [(ngModel)]="isChecked" #t>Edit</mat-slide-toggle><br>
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.name" [disabled]="!t.checked" value="{{transactionDetails.name}}">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.phone" [disabled]="!t.checked" value="{{transactionDetails.phone}}">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.amount" [disabled]="!t.checked" value="{{transactionDetails.amount}}">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Given To</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.givenTo" [disabled]="!t.checked" value="{{transactionDetails.givenTo}}">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Receive From</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.receiveFrom" [disabled]="!t.checked" value="{{transactionDetails.receiveFrom}}">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Transaction Type</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.transactionType" [disabled]="!t.checked" value="{{transactionDetails.transactionType}}">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Transaction Mode</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.transactionMode" [disabled]="!t.checked" value="{{transactionDetails.transactionMode}}">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Date</mat-label>
+        <input matInput [(ngModel)]="transactionDetails.create_date" [disabled]="!t.checked" value="{{transactionDetails.create_date | date : 'dd-MMM-YYYY'}}">
+    </mat-form-field>
+
+    
+    <mat-form-field class="description" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="transactionDetails.description" [disabled]="!t.checked" value="{{transactionDetails.description}}"></textarea>
+    </mat-form-field>
+
+    <div class="center">
+        <button [disabled]="!t.checked" (click)="updateTransaction()"mat-raised-button color="primary">Update</button>
+        <button [disabled]="!t.checked" (click)="deleteTransaction()" mat-raised-button color="warn">Remove</button>
+    </div>    
+</section>

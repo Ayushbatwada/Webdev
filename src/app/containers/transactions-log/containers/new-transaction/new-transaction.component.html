@@ -1,0 +1,48 @@
+<section class="detail">
+    <div class="heading">New Transaction</div>
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input name="name" matInput [(ngModel)]="name">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input name="phone" matInput [(ngModel)]="phone">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input name="amount" matInput [(ngModel)]="amount">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Given To</mat-label>
+        <input name="givenTo" matInput [(ngModel)]="givenTo">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Receive From</mat-label>
+        <input name="receiveFrom" matInput [(ngModel)]="receiveFrom">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Transaction Type</mat-label>
+        <input name="type" matInput [(ngModel)]="transactionType">
+    </mat-form-field>
+
+    <mat-form-field class="info" appearance="fill">
+        <mat-label>Transaction Mode</mat-label>
+        <input name="mode" matInput [(ngModel)]="transactionMode">
+    </mat-form-field>
+
+ 
+    <mat-form-field class="description" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea name="description" matInput [(ngModel)]="description"></textarea>
+    </mat-form-field>
+
+    <div class="center">
+        <button  (click)="createNewTransaction()"mat-raised-button color="primary">Create</button>
+    </div>    
+</section>
+
