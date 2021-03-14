@@ -19,7 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeTopBarComponent } from './components/home-top-bar/home-top-bar.component';
 import { HomeComponent } from './containers/home/home.component';
 import { TaskTrackerComponent } from './containers/tasks/task-tracker/task-tracker.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+// import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -47,7 +47,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FormsModule
     
   ],
-  providers: [{provide:LocationStrategy,useClass:HashLocationStrategy}],
+  // providers: [{provide:LocationStrategy,useClass:HashLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
